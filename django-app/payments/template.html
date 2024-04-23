@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C/DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    {% load static from staticfiles %}
+    {% load i18n %}
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="content-language" content='{% trans "g_locale2" %}'/>
+    <title>{% block title %}{% endblock %}</title>
+    <style type="text/css">
+        @page {
+            size: A4;
+            margin: 1cm;
+            @frame footer {
+                -pdf-frame-content: footerContent;
+                bottom: 0cm;
+                margin-left: 9cm;
+                margin-right: 9cm;
+                height: 1cm;
+                font-family: "Microsoft JhengHei";
+            }
+        }
+        @font-face {
+            font-family: "Microsoft JhengHei";
+            src:url('{% static "ttf/msjh.ttf" %}');
+        }
+        @font-face {
+            font-family: "Microsoft JhengHei";
+            src:url('{% static "ttf/msjhbd.ttf" %}');
+        }
+        @font-face {
+            font-family: "Helvetica";
+            src:url('{% static "ttf/Helvetica_Reg.ttf" %}');
+        }
+        table.styled-table tr th {
+            color: gray;
+            background-color: blue;
+            font-size: 14px;
+            font-family:"Microsoft JhengHei";
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-content">
+        <div class="container">
+            <div class="table-div">
+                <table class="styled-table">
+                    <tr class="row_header">
+                        <th class="col_order">{% trans "g_item_num" %}</th>
+                        <th class="col_name">{% trans "g_item_name" %}</th>
+                        <th class="col_provider">{% trans "g_provider_name" %}</th>
+                        <th class="col_budget_quantity">{% trans "g_quantity" %}</th>
+                        <th class="col_price">{% trans "g_item_price" %}</th>
+                        <th class="col_total_price">{% trans "g_item_total" %}</th>
+                    </tr>
+                </table>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
