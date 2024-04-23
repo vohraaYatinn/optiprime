@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  django:
+    build: ./django-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - /Users/coladco/path/to/local/django/data:/app/data
+    environment:
+      - DJANGO_DB_ENGINE=sqlite
+      - DJANGO_DB_NAME=/app/data/db.sqlite3
+
+  frontend:
+    build: ./frontend-react
+    ports:
+      - "3000:3000"
+    volumes:
+      - /Users/coladco/path/to/local/frontend/data:/app/data
+    depends_on:
+      - django
