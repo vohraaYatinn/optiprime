@@ -1,0 +1,62 @@
+
+.hover-point-price:hover{
+    border: 3px solid green;
+}
+.pointactive{
+    border: 3px solid green;
+}
+.modal-content{
+    background-color: white !important;
+}
+.modal-header button{
+    display: none !important;
+}
+.static-modal-down .modal-content{
+    margin-top: 10rem;
+}
+@media screen and (max-width: 665px) {
+    .mobile-steps-track{
+        display: flex;
+        background-color: white;
+        padding: 1rem;
+    }
+    .tab-pane-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .red-mobile-input .input-group{
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+    }
+    .red-amount-inp{
+        width: 100% !important;
+    }
+    .pad-mobile-amount{
+        padding: 0rem;
+    }
+    .with-mobile-tab{
+        width: 100% !important;
+    }
+    .mobile-bank-amount{
+        width: 30% ;
+    }
+    .mobile-card-product{
+        width: 100% !important;
+    }
+    .footer{
+        font-size: 0.8rem;
+    }
+    .mobile-product{  
+        margin-top: 2rem !important;
+       }
+    .mobile-card-pad{
+        padding: 0rem !important;
+    }
+    .mobile-product-cart{
+        margin-top: 4rem !important;
+
+    }
+}
